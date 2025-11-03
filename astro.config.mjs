@@ -1,13 +1,16 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
 
-// For GitHub Project Pages, Astro needs a base path matching the repository name.
-// The installer will replace startup-weekend-brussels with your repository slug.
+// Production configuration for https://startupweekend.brussels
 export default defineConfig({
-  site: 'https://__GITHUB_USER__.github.io/startup-weekend-brussels/',
-  base: '/startup-weekend-brussels/',
-  outDir: 'dist',
+  site: "https://startupweekend.brussels",
+  base: "/",
+  output: "static",
+  outDir: "dist",
   server: {
     host: true,
-    port: 4321
-  }
+    port: 4321,
+  },
+  integrations: [react(), tailwind()],
 });

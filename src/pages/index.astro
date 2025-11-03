@@ -1,22 +1,233 @@
 ---
-const title = 'Welcome to Startup Weekend Brussels';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main>
-      <h1>{title}</h1>
-      <p>You're running an Astro site scaffolded by dc-toolbelt.</p>
-      <ul>
-        <li>Build: <code>npm run build</code></li>
-        <li>Dev: <code>npm run dev</code></li>
-        <li>Preview: <code>npm run preview</code></li>
-      </ul>
-    </main>
-  </body>
-</html>
+<Layout 
+  title="Startup Weekend Brussels - 54 Hours to Build Your Startup | 2026 Edition"
+  description="Join Startup Weekend Brussels 2026! 54 hours to turn your AI and tech ideas into reality. Connect with entrepreneurs, developers, and designers in Brussels."
+  ogType="website"
+>
+  <!-- Additional Structured Data for Homepage -->
+  <script type="application/ld+json" slot="head">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Startup Weekend Brussels 2026",
+    "description": "A 54-hour entrepreneurship event focused on AI and emerging technologies where ideas become reality through collaboration.",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-03",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Brussels, Belgium",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brussels",
+        "addressRegion": "Brussels-Capital Region",
+        "addressCountry": "BE"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Startup Weekend Brussels",
+      "url": "https://startupweekend.brussels"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/PreOrder",
+      "url": "https://startupweekend.brussels/2026-edition#register"
+    },
+    "keywords": ["startup", "entrepreneurship", "AI", "innovation", "brussels", "hackathon", "business"],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "entrepreneurs, developers, designers, AI enthusiasts"
+    }
+  }
+  </script>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="text-center">
+        <img src="/Startup-Weekend-Brussels.png" alt="Startup Weekend Brussels" class="h-20 mx-auto mb-8" />
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+          Startup Weekend Brussels
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          54 hours to turn your idea into reality. Join entrepreneurs, developers, and designers in the heart of Brussels.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/2026-edition" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+            2026 Edition Coming Soon
+          </a>
+          <a href="/about" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Startup Weekend Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          What is Startup Weekend?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          A 54-hour event where entrepreneurs, developers, designers, and business experts come together to share ideas, form teams, and build startups.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">💡</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Friday: Pitch Ideas</h3>
+          <p class="text-gray-600">
+            Present your startup idea in 60 seconds. Teams form around the most compelling concepts.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🛠️</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Saturday: Build & Develop</h3>
+          <p class="text-gray-600">
+            Work intensively with your team to develop your idea into a functional prototype.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🎯</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Sunday: Present & Win</h3>
+          <p class="text-gray-600">
+            Pitch your startup to judges and compete for prizes, mentorship, and investment opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Next Edition Teaser -->
+  <section class="py-16 bg-gradient-to-r from-gray-100 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            🤖 Next Edition: AI & Innovation Focus
+          </h2>
+          <p class="text-xl text-gray-600 mb-6">
+            Startup Weekend Brussels 2026 will spotlight AI and emerging technologies. 
+            <br class="hidden md:block" />
+            <strong>Official announcement coming soon!</strong>
+          </p>
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 inline-block">
+            <p class="text-blue-800 font-semibold">📅 Expected: Spring 2026 | 📍 Brussels, Belgium</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/2026-edition#register" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
+            Pre-Register Now
+          </a>
+          <a href="/2026-edition" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Startup Weekend by the Numbers
+        </h2>
+        <p class="text-xl text-gray-300">
+          Join a global movement that has transformed thousands of ideas into successful startups
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">3000+</div>
+          <p class="text-gray-300">Cities Worldwide</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-purple-400 mb-2">1M+</div>
+          <p class="text-gray-300">Participants</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-green-400 mb-2">25K+</div>
+          <p class="text-gray-300">Startups Created</p>
+        </div>
+        <div>
+          <div class="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">$100M+</div>
+          <p class="text-gray-300">Funding Raised</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Ready to Build the Future?
+      </h2>
+      <p class="text-xl mb-8 text-blue-100">
+        Don't miss out on the most exciting entrepreneurial event in Brussels. 
+        Pre-register now to be the first to know when tickets go live.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <a href="/2026-edition#register" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block">
+          Secure Your Spot Now
+        </a>
+        <div class="flex items-center justify-center space-x-4">
+          <span class="text-blue-100">Follow us:</span>
+          <a 
+            href="https://x.com/swbru" 
+            target="_blank" 
+            rel="noopener"
+            class="text-blue-100 hover:text-white transition-colors"
+            aria-label="Follow us on X"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a 
+            href="https://www.facebook.com/swbru" 
+            target="_blank" 
+            rel="noopener"
+            class="text-blue-100 hover:text-white transition-colors"
+            aria-label="Follow us on Facebook"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a 
+            href="https://www.instagram.com/swbru/" 
+            target="_blank" 
+            rel="noopener"
+            class="text-blue-100 hover:text-white transition-colors"
+            aria-label="Follow us on Instagram"
+          >
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
