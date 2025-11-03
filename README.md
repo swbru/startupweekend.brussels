@@ -1,6 +1,6 @@
 # Startup Weekend Brussels 🚀
 
-[![Deploy Status](https://github.com/startup-weekend-brussels/startup-weekend-brussels/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/startup-weekend-brussels/startup-weekend-brussels/actions/workflows/gh-pages.yml)
+[![Deploy Status](https://github.com/swbru/startupweekend.brussels/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/swbru/startupweekend.brussels/actions/workflows/gh-pages.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fstartupweekend.brussels)](https://startupweekend.brussels)
 
 **Where ideas become reality in 54 hours.**
